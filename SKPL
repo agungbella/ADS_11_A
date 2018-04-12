@@ -1,0 +1,126 @@
+SPESIFIKASI KEBUTUHAN PERANGKAT LUNAK
+“Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance”
+
+1.	Pendahuluan
+1.1	Tujuan Penulisan Dokumen
+Dokumen ini ditulis untuk tujuan menjabarkan spesifikasi dari perangkat lunak kami yaitu Sistem Informasi Layanan Kendaraan Gawat 
+Darurat Ambulance (CALLGANCY). Penjabaran spesfikasi kebutuhan lunak ini meliputi deskripsi umum perangkat lunak dan deskripsi 
+kebutuhan perangkat lunak. Dalam membangun perangkat lunak tersebut, tentunya spesifikasi kebutuhan untuk perangkat lunak tersebut 
+dibutuhkan, khususnya oleh para pengembang dan pembangun perangkat lunak tersbut.
+
+1.2	Lingkup Masalah
+CALLGANCY adalah sebuah sistem informasi yang berbasis aplikasi yang digunakan untuk memanggil kendaraan darurat (Ambulance) jika 
+terjadi kejadian disekitar yang membutuhkan bantuan akomodasi layanan transportasi gawat daurat. Pengguna perangkat lunak ini dapat 
+melakukan pendaftaran sebagai user, mendapatkan notification kejadian gawat darurat, memanggil kendaraat gawat darurat atau Ambulance, 
+melihat informasi kejadian gawat darurat, melihat info detail dari Ambulance, dan membayar biaya Ambulance. Data tersebut dikelola 
+oleh admin yang ada, dan bekerjasama dengan puskesmas, rUmah sakit dan tempat aman lainnya yang ada disekitar daerah terjadinya 
+peristiwa gawat darurat dan akan dilaporkan ke admin pusat.
+
+1.3	Definisi, Istilah dan Singkatan
+Berikut adalah definisi, istilah serta singkatan yang akan digunakan dalam penjabaran dokumen perangkat lunat ini:
+DFD : Data FLow Diagram. Diagram yang menggambarkan aliran data pada perangkat lunak.
+ERD : Entity Realation Diagram. Diagram yang menggambarkan entitas suatu objek beserta relasinya.
+Interfaces : Tampilan antarmuka antara perangkat lunak dengan pengguna (user)
+Data store : Tempat penyimpanan data 
+API : Application Programming Interface 
+
+1.4	Aturan Penomeran
+
+1.5	Referensi
+
+1.6	Deskripsi umum Dokumen (Ikhtisar)
+	Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) ini berisikan meliputi: pendahuluan, deskripsi umum perangkat lunak, dan 
+  deskripsi kebutuhan perangkat lunak.
+	Bagian Pendahuluan berisi tujuan penulisan mengenai tujuan dan alasan kenapa dokumen ini dibuat, lingkup permasalahan yang 
+  berisi ringkasan deskripsi dari perangkat lunak yang akan dibuat, definisi, istilah dan singkatan yang digunakan dalam dokumen 
+  spesifikasi kebutuhan ini, atau penomoran yang digunakan dalam penulisan dokumen spesifikasi kebutuhan ini. Bagian deskripsi 
+  umum kebutuhan perangkat lunak berisi deskripsi umum dari sistem perangkat lunak yang akan dibuat, karakteristik pengguna 
+  perangkat lunak ini dan batasan pembuatan perangkat lunak itu sendiri dan lingkungan operasi yang diperuntukan bagi perangkat 
+  lunak yang akan dibuat.  
+
+2.	Deskripsi Umum Perangkat Lunak
+2.1	Deskripsi Umum Sistem
+ CALLGANCY merupakan sistem informasi yang berbasis aplikasi. yang digunakan untuk memanggil kendaraan darurat (Ambulance) jika 
+terjadi kejadian disekitar yang membutuhkan bantuan akomodasi layanan transportasi gawat daurat. Pengguna perangkat lunak ini 
+dapat melakukan pendaftaran sebagai user dan sebagai driver. Dalam sisi user, pendaftar mengisi borang biodata informasi diri 
+dimana salah satu isian yang harus di isi user ialah dengan mmenggunakan kode unik (NIK KTP) hal ini ditujukan untuk memvalidasi 
+seta meminimalisir pendaftar hoax, user yang sudah login dan menjalankan aplikasi ini akan mendapatkan notification jika terdapat 
+kejadian gawat darurat yang ada disekitar user berada secara real time, jika user membutuhkan bantuan maka user dapat langsung 
+memanggil kendaraat gawat darurat atau Ambulance yang ada lewat aplikasi ini dengan cara langsung memencet button call ataupun 
+memencet gambar ambulance terdekat yang ada , selain itu user juga dapat melihat informasi semua kejadian gawat darurat yang ada 
+(tidak hanya kejadian yang ada disekitar tempat kita saja, tapi ditempat lain yang jauh dari tempat kita), melihat info detail 
+dari Ambulance (kendaraan yang didapat dan harga), dan membayar biaya Ambulance (jika pihak ambulance yang mendaftarkan diri 
+tidak memberikan tariff, maka user tidak perlu membayar). Sedangkan dalam sisi driver, driver mengisi borang pendaftaran dan 
+mendaftarkan nomor kendaraan yang akan dijadikan untuk membantu dan menjadi kendaraan gawat darurat, driver dapat  memberikan 
+respon jika ada user yang memesan, setelah membantu mengantarkan korban ke tempat yang aman atau rumahsakit driver dapat memberikan 
+informasi kejadian dengan cara memposting info kejadian gawat darurat tersebut pada timeline sehingga dapat dibaca oleh user.
+
+System ini dikelola oleh seorang admin yang bertugas memprbaharui katalog ambulance, data user, dan data driver. Data-data ini 
+dipertanggungjawabkan dalam bentuk laporanpertanggungjawaban. Laporan ini akan dicetak apabila ada pihak terkait yang meminta laporan 
+tersebut melaliui admin. Admin akan melakukan permintaan generate laporan kepada aplikasi.
+
+2.2	Karakteristik Pengguna
+(Kategori Pengguna – Tugas – Hak akses ke aplikais)
+a.	Admin – Memperbaharui katalog ambulance, data user, dan data driver – sign in sebagai admin, control panel server, dan basis data 
+b.	User – meminta bantuna dna memanggil ambulance – sign in sebagai user
+c.	Driver – memberikan respond dan dating membantu bersama dengan ambulance nya – sign sebagai driver 
+
+2.3	Batasan
+Dalam pembuatan perangkat lunak ini, ada beberapa batasan yang digunakan. Batasan-batasan tersebut antara lain :
+1. User hanya dapat memanggil ambulance jika sudah sign in.
+2. Aplikasi hanya berfungsi pada aplikasi berbasis android.
+
+2.4	Lingkungan Operasi
+Aplikasi Client server ini akan berfungsi dengan spesifikasi :
+Server :
+	Komputer dengan spesifikasi hardware minimal sebagai berikut :
+	•	Processor Intel Pentium 4 3 Ghz
+	•	Motherboard support internet connection
+	•	2 GB RAM
+	•	500 GB Hard Disk Drive utama
+	•	500 GB Hard Disk Drive backup
+	•	VGA Card 256 MB
+	•	NIC FastEthernet atau Gigabit Ethernet
+	•	Mouse
+	•	Keyboard
+	•	Monitor
+	•	Power Supply
+	Komputer yang minimal telah terinstall software sebagai berikut :
+	•	Browser Google Chrome/Mozilla Firefox/Opera mini
+	•	PDF reader
+	•	Word Processor
+	•	Apache HTTP Server
+	•	Mail Server
+	DBMS (Database Management System) minimal MySQL 5.0.20 ke atas 
+	Koneksi internet dengan bandwidth minimal 1 Mbps 
+	OS minimal Windows 2003 Server atau Ubuntu Server
+	
+Client :
+	Smartphone dengan spesifikasi hardware minimal sebagai berikut :
+  •	android minimal versi API 16 (Ice Cream Sandwich)
+  • RAM minimal 512MB
+
+3.	Deskripsi Kebutuhan
+3.1	Kebutuhan Antarmuka Eksternal
+Sistem Informasi Donor Darah membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut :
+3.1.1	Antarmuka pemakai
+User interface yang digunakan untuk pengoperasian Sistem Informasi Donor Darah antara lain :
+
+3.1.2	Antarmuka Perangkat Keras
+3.1.3	Antarmuka Perangkat Lunak
+3.1.4	Antarmuka Komunikasi
+
+3.2	Kebutuhan Fungsional 
+
+3.3	Kebutuhan Data
+
+3.4	Kebutuhan Non Fungsional
+
+3.5	Batasan Perancangan
+
+3.6	Kerunutan (traceability)
+
+3.7	Kebutuhan Fungsional
+
+3.7.1	Kebutuhan Fungsional
+3.7.2	Kebutuhan Non Fungsional
