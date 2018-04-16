@@ -97,14 +97,14 @@ Server :
 	
 Client :
 	Smartphone dengan spesifikasi hardware minimal sebagai berikut :
-  •	android minimal versi API 16 (Ice Cream Sandwich)
-  • RAM minimal 512MB
+  	•	android minimal versi API 16 (Ice Cream Sandwich)
+  	• 	RAM minimal 512MB
 
 3.	Deskripsi Kebutuhan
 3.1	Kebutuhan Antarmuka Eksternal
-Sistem Informasi Donor Darah membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut :
+Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut :
 3.1.1	Antarmuka pemakai
-User interface yang digunakan untuk pengoperasian Sistem Informasi Donor Darah antara lain :
+User interface yang digunakan untuk pengoperasian Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance antara lain :
 
 3.1.2	Antarmuka Perangkat Keras
 3.1.3	Antarmuka Perangkat Lunak
@@ -123,4 +123,16 @@ User interface yang digunakan untuk pengoperasian Sistem Informasi Donor Darah a
 3.7	Kebutuhan Fungsional
 
 3.7.1	Kebutuhan Fungsional
+	1. Sistem dapat menyediakan daftar kendaraan gawat darurat yang sudah ter-registrasi diseluruh wilayah
+	2. Sistem dapat menerima inputan data yang dilakukan oleh pemilik kendaraan
+	3. Sistem menyediakan informasi mengenai ketersedian kendaraan, jarak kendaraan dengan lokasi user, dan harga
+	4. Sistem menyediakan informasi tentang langkah atau tindakan pertama yang harus dilakukan dengan memberi contact person dan tempat aman yang terdekat dari lokasi user
+	5. Driver kendaraan memiliki notifikasi  khusus yang dimana jika notif tersebut tidak dibuka maka suara HP Driver tersebut otomatis akan bordering semakin keras
+	6. User dapat melihat kelengkapan informasi atau history dari apa yang telah dilakukan
+
 3.7.2	Kebutuhan Non Fungsional
+	1. Sistem dijalankan pada platform yang berbasis Android
+	2. Memiliki tampilan yang menarik dan responsive
+	3. Dalam menampilkan kendaraan yang tersedia disekitar lokasi system berjalan tidak lebih dari 10-15 detik
+	4. Menggunakan multibahasa (Bahasa Indonesia & Inggris)
+
