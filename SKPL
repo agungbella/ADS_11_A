@@ -112,11 +112,27 @@ Client :
 Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut :
 3.1.1	Antarmuka pemakai
 Antarmuka yang digunakan untuk pengoperasian Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance antara lain :
+	• 	Tampilan awal berupa tampilan maps
+	• 	Tampilan informasi kejadian
+	• 	Tampilan list ambulance
+	• 	Tampilan informasi ambulance
+Alat-alat yang mendukung antarmuka pemakai adalah sebagai berikut :
+	• 	Smartphone
 
 3.1.2	Antarmuka Perangkat Lunak pada Ambulance
-3.1.3	Antarmuka Perangkat Lunak pada Pengguna
+Antarmuka yang digunakan untuk pengoperasian pada sisi supir untuk Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance 
+antara lain :
+	• 	Tampilan mendaftar amnbulance
+	• 	Tampilan notifikasi dari pengguna 
+	• 	Tampilan menulis kejadian
+	
+Alat-alat yang mendukung antarmuka pemakai adalah sebagai berikut :
+	• 	Smartphone
+	
 3.1.4	Antarmuka Komunikasi
-
+Antarmuka komunikasi yang digunakan untuk mengoperasikan perangkat lunak antara lain:
+	• 	internet
+	• 	GPS
 3.2	Kebutuhan Fungsional 
 Kebutuhan fungsional pada Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance adalah sebagai berikut :
 	1.	Sistem dapat menyediakan daftar kendaraan gawat darurat yang sudah ter-registrasi diseluruh wilayah
@@ -138,7 +154,12 @@ Kebutuhan fungsional pada Sistem Informasi Layanan Kendaraan Gawat Darurat Ambul
 	4.	Menggunakan multibahasa (Bahasa Indonesia & Inggris)
 	
 3.5	Batasan Perancangan
-
+Batasan perancangan yang dipakai dalam pengembangan perangkat lunak Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance
+antara lain :
+	• 	tampilan dibuat menggunakan android studio
+	• 	icon dibuat menggunakan corel draw
+	• 	Bahasa pemrograman yang digunakan adalah java dan XML
 3.6	Kerunutan (traceability)
-
+mapping kebutuhan fungsional dengan proses pada DFD untuk perangkat lunak Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance
+adalah sebagai berikut:
 
