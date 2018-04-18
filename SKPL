@@ -4,7 +4,7 @@ SPESIFIKASI KEBUTUHAN PERANGKAT LUNAK
 1.	Pendahuluan
 1.1	Tujuan Penulisan Dokumen
 Dokumen ini ditulis untuk tujuan menjabarkan spesifikasi dari perangkat lunak kami yaitu Sistem Informasi Layanan Kendaraan Gawat 
-Darurat Ambulance (CALLGANCY). Penjabaran spesfikasi kebutuhan lunak ini meliputi deskripsi umum perangkat lunak dan deskripsi 
+Darurat Ambulance (CALLGENCY). Penjabaran spesfikasi kebutuhan lunak ini meliputi deskripsi umum perangkat lunak dan deskripsi 
 kebutuhan perangkat lunak. Dalam membangun perangkat lunak tersebut, tentunya spesifikasi kebutuhan untuk perangkat lunak tersebut 
 dibutuhkan, khususnya oleh para pengembang dan pembangun perangkat lunak tersbut.
 
@@ -24,9 +24,16 @@ Interfaces : Tampilan antarmuka antara perangkat lunak dengan pengguna (user)
 Data store : Tempat penyimpanan data 
 API : Application Programming Interface 
 
-1.4	Aturan Penomeran
-
+1.4	Aturan Penomoran
+Aturan penomoran untuk versi software yang dipublikasi menggunakan aturan Semantic Versioning Specification 2.0 yang ditulis oleh 
+Tom Presten-Werner. Terdapat 3 jenis nomor yang digunakan yakni X, Y dan Z dengan penggunaan yaitu :
+	Versi X.Y.Z
+ - X akan berubah nomornya seiring terdapat perubahan besar (Major) yang terjadi pada aplikasi.
+ - Y akan bertambah apabila terdapat perubahan yang kecil (Minor) pada aplikasi.
+ - Z sebagai penanda untuk nomor Patch / API yang dirilis pada publik.
+ 
 1.5	Referensi
+
 
 1.6	Deskripsi umum Dokumen (Ikhtisar)
 	Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) ini berisikan meliputi: pendahuluan, deskripsi umum perangkat lunak, dan 
@@ -104,35 +111,34 @@ Client :
 3.1	Kebutuhan Antarmuka Eksternal
 Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut :
 3.1.1	Antarmuka pemakai
-User interface yang digunakan untuk pengoperasian Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance antara lain :
+Antarmuka yang digunakan untuk pengoperasian Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance antara lain :
 
-3.1.2	Antarmuka Perangkat Keras
-3.1.3	Antarmuka Perangkat Lunak
+3.1.2	Antarmuka Perangkat Lunak pada Ambulance
+3.1.3	Antarmuka Perangkat Lunak pada Pengguna
 3.1.4	Antarmuka Komunikasi
 
 3.2	Kebutuhan Fungsional 
+Kebutuhan fungsional pada Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance adalah sebagai berikut :
+	1.	Sistem dapat menyediakan daftar kendaraan gawat darurat yang sudah ter-registrasi diseluruh wilayah
+	2.	Sistem dapat menerima inputan data yang dilakukan oleh pemilik kendaraan
+	3.	Sistem menyediakan informasi mengenai ketersedian kendaraan, jarak kendaraan dengan lokasi user, dan harga
+	4.	Sistem menyediakan informasi tentang langkah atau tindakan pertama yang harus dilakukan dengan memberi contact person 
+	dan tempat aman yang terdekat dari lokasi user
+	5.	Driver kendaraan memiliki notifikasi  khusus yang dimana jika notif tersebut tidak dibuka maka suara HP Driver tersebut
+	otomatis akan bordering semakin keras
+	6.	User dapat melihat kelengkapan informasi atau history dari apa yang telah dilakukan
 
 3.3	Kebutuhan Data
 
 3.4	Kebutuhan Non Fungsional
-
+Kebutuhan fungsional pada Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance adalah sebagai berikut :
+	1.	Sistem dijalankan pada platform yang berbasis Android
+	2.	Memiliki tampilan yang menarik dan responsive
+	3.	Dalam menampilkan kendaraan yang tersedia disekitar lokasi system berjalan tidak lebih dari 10-15 detik
+	4.	Menggunakan multibahasa (Bahasa Indonesia & Inggris)
+	
 3.5	Batasan Perancangan
 
 3.6	Kerunutan (traceability)
 
-3.7	Kebutuhan Fungsional
-
-3.7.1	Kebutuhan Fungsional
-	1. Sistem dapat menyediakan daftar kendaraan gawat darurat yang sudah ter-registrasi diseluruh wilayah
-	2. Sistem dapat menerima inputan data yang dilakukan oleh pemilik kendaraan
-	3. Sistem menyediakan informasi mengenai ketersedian kendaraan, jarak kendaraan dengan lokasi user, dan harga
-	4. Sistem menyediakan informasi tentang langkah atau tindakan pertama yang harus dilakukan dengan memberi contact person dan tempat aman yang terdekat dari lokasi user
-	5. Driver kendaraan memiliki notifikasi  khusus yang dimana jika notif tersebut tidak dibuka maka suara HP Driver tersebut otomatis akan bordering semakin keras
-	6. User dapat melihat kelengkapan informasi atau history dari apa yang telah dilakukan
-
-3.7.2	Kebutuhan Non Fungsional
-	1. Sistem dijalankan pada platform yang berbasis Android
-	2. Memiliki tampilan yang menarik dan responsive
-	3. Dalam menampilkan kendaraan yang tersedia disekitar lokasi system berjalan tidak lebih dari 10-15 detik
-	4. Menggunakan multibahasa (Bahasa Indonesia & Inggris)
 
