@@ -33,8 +33,10 @@ Tom Presten-Werner. Terdapat 3 jenis nomor yang digunakan yakni X, Y dan Z denga
  - Z sebagai penanda untuk nomor Patch / API yang dirilis pada publik.
  
 1.5	Referensi
-
-
+	[1]	M. Kartasasmita, A. B. Purba, and W. Kusdiawan, “Penentuan Jarak Efisien Pengantaran Pasien Oleh Ambulance Ke Rsud Karawang Dengan Algoritme Dijkstra,” Ilkom, vol. 9, pp. 290–300, 2017.
+	[2]	V. A. Purnomo, “Rancang Bangun Aplikasi Penyedia Layanan Ambulans Menggunakan Teknologi Gis , Gsm Dan Gps ( Gprs ),” Techno.COM, vol. 12, no. 3, pp. 150–156, 2013.
+	[3]	R. Kurniawan, I. A. Rahman, and R. L. Nataligunawati, “Penatalaksanaan transportasi pasien di instalasi gawat darurat rumah sakit,” Gaster, vol. XV, no. 1, 2017.
+ 
 1.6	Deskripsi umum Dokumen (Ikhtisar)
 	Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) ini berisikan meliputi: pendahuluan, deskripsi umum perangkat lunak, dan 
   deskripsi kebutuhan perangkat lunak.
@@ -139,12 +141,13 @@ Kebutuhan fungsional pada Sistem Informasi Layanan Kendaraan Gawat Darurat Ambul
 	2.	Sistem dapat menerima inputan data yang dilakukan oleh pemilik kendaraan
 	3.	Sistem menyediakan informasi mengenai ketersedian kendaraan, jarak kendaraan dengan lokasi user, dan harga
 	4.	Sistem menyediakan informasi tentang langkah atau tindakan pertama yang harus dilakukan dengan memberi contact person 
-	dan tempat aman yang terdekat dari lokasi user
+		dan tempat aman yang terdekat dari lokasi user
 	5.	Driver kendaraan memiliki notifikasi  khusus yang dimana jika notif tersebut tidak dibuka maka suara HP Driver tersebut
-	otomatis akan bordering semakin keras
+		otomatis akan bordering semakin keras
 	6.	User dapat melihat kelengkapan informasi atau history dari apa yang telah dilakukan
 
 3.3	Kebutuhan Data
+	(Diagram ER)
 
 3.4	Kebutuhan Non Fungsional
 Kebutuhan fungsional pada Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance adalah sebagai berikut :
