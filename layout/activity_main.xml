@@ -34,7 +34,9 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
                 android:text="informasi"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:onClick="btninformasi"  
+                />
             <Button
                 android:id="@+id/eval_bt_ambulance"
                 android:layout_weight="1"
@@ -44,7 +46,8 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
                 android:text="ambulance"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:onClick="btnambulance"/>
         </LinearLayout>
 
         <ScrollView
