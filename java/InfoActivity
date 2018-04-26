@@ -1,0 +1,10 @@
+package com.example.dell.ambulance;
+
+import android.os.Bundle;
+
+public class HomeActivity extends AppCompatActivity{
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_info);
+}
