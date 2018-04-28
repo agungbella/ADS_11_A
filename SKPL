@@ -147,7 +147,9 @@ Kebutuhan fungsional pada Sistem Informasi Layanan Kendaraan Gawat Darurat Ambul
 	6.	User dapat melihat kelengkapan informasi atau history dari apa yang telah dilakukan
 
 3.3	Kebutuhan Data
-	(Diagram ER)
+	• DFD level 0
+	• DFD level 1
+		(*terdapat dalam repository ini pada folder Dokumentasi/ DFD / DFD level 0 dan DFD level 1)
 
 3.4	Kebutuhan Non Fungsional
 Kebutuhan fungsional pada Sistem Informasi Layanan Kendaraan Gawat Darurat Ambulance adalah sebagai berikut :
