@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+    <!--android:background="@mipmap/bg_app"-->
+    <!--tools:context="com.example.adityasm.EvalActivity"-->
+
+    <LinearLayout
+        android:id="@+id/eval_ll_pembahasan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/windowBackground"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="70dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <LinearLayout
+            android:id="@+id/eval_ll_title_pembahasan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--android:background="@color/colorLightRed">-->
+
+
+            <Button
+                android:id="@+id/eval_bt_informasi"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:text="informasi"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+            <Button
+                android:id="@+id/eval_bt_ambulance"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:text="ambulance"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ViewFlipper
+            android:id="@+id/eval_vf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/activity_info"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+            <include layout="@layout/activity_ambu"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+            </ViewFlipper>
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
