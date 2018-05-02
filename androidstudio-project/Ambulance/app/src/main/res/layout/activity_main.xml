@@ -47,23 +47,6 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
         </LinearLayout>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ViewFlipper
-            android:id="@+id/eval_vf"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <include layout="@layout/activity_info"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent" />
-            <include layout="@layout/activity_ambu"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"/>
-            </ViewFlipper>
-        </ScrollView>
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
