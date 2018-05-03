@@ -21,20 +21,21 @@
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_home" />
+<!--
 
     <LinearLayout
         android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_behavior="@string/bottom_sheet_behavior"
-        app:peek_height="128dp">
+        app:layout_behavior="@string/bottom_sheet_behavior">
 
         <android.support.design.widget.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu="@menu/navigation" />
     </LinearLayout>
+-->
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
