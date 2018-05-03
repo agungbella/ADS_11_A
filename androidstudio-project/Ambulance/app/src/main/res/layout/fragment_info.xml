@@ -1,6 +1,344 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:orientation="vertical"-->
+<!--android:padding="16dp">-->
+<!--<ImageView-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:src="@mipmap/ic_launcher" />-->
+<!--<TextView-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--tools:text="Nama Ambulance"-->
+<!--android:gravity="center"-->
+<!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"-->
+<!--android:layout_marginBottom="8dp"/>-->
+<!--<TextView-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--tools:text="harga"-->
+<!--android:gravity="center"-->
+<!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"-->
+<!--android:layout_marginBottom="8dp"/>-->
+<!--<TextView-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--tools:text="Detail"-->
+<!--android:gravity="center"-->
+<!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"-->
+<!--android:layout_marginBottom="8dp"/>-->
+<!--</LinearLayout>-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AmbuActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profil_percetakan_main_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_person_black_24dp"/>
+        <android.support.v7.widget.CardView
+            android:id="@+id/profil_percetakan_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/profil_percetakan_main_image"
+            android:layout_marginStart="-1dp"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/profil_percetakan_call_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:selectableItemBackground"
+                    app:srcCompat="@drawable/ic_call_white_24dp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@id/profil_percetakan_call_btn"
+                    android:background="@android:color/darker_gray" />
+
+                <ImageButton
+                    android:id="@+id/profil_percetakan_maps_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_toEndOf="@id/profil_percetakan_call_btn"
+                    android:background="?android:selectableItemBackground"
+                    app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@id/profil_percetakan_maps_btn"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/profil_percetakan_antrian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginTop="0dp"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:background="@color/colorAccent"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:text="Tarif: GRATIS" />
+
+                <TextView
+                    android:id="@+id/profil_percetakan_jam_buka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/profil_percetakan_maps_btn"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Alamat Instansi Pemilik"
+                    tools:ignore="EllipsizeMaxLines" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <!--
+        <TextView
+            android:id="@+id/profil_percetakan_antrian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/profil_percetakan_card_view"
+            android:paddingEnd="16dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_antrian_percetakan"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            tools:text="Antrian Kosong" />-->
+        <TextView
+            android:id="@+id/profil_percetakan_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/profil_percetakan_card_view"
+            android:paddingEnd="16dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:text="Tidak Aktif" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profil_percetakan_text_daftar_harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:textStyle="bold"
+                android:text="Ulasan Berita"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Frédéric Chopin"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:text="yshs" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="18dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Étude Op. 10, No. 3 Tristesse"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:text="yuhu" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <LinearLayout
+                        android:padding="18dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Étude Op. 25, No. 11 Winter Wind"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:text="yehe" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <LinearLayout
+                        android:padding="18dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Étude Op. 10, No. 5 Black Keys"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:text="yahaeee" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/profil_percetakan_print_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_airport_shuttle_black_24dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:drawable/screen_background_dark_transparent">
+
+        <ImageButton
+            android:id="@+id/profil_percetakan_back_btn"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:background="?android:selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            tools:targetApi="lollipop" />
+        <ImageButton
+            android:id="@+id/profil_percetakan_fav_btn"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="?android:selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_star_border_white_24dp"
+            tools:targetApi="lollipop" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_toEndOf="@id/profil_percetakan_back_btn"
+            android:layout_toStartOf="@id/profil_percetakan_fav_btn">
+
+            <TextView
+                android:id="@+id/profil_percetakan_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:text="Ambulance ABC"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
