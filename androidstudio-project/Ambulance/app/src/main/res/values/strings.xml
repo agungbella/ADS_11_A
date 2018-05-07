@@ -14,4 +14,13 @@
     <string name="title_sign_up">Sign Up</string>
     <string name="title_settings">Settings</string>
 
+<<<<<<< HEAD
+||||||| merged common ancestors
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+=======
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+>>>>>>> 7ea5667a3926b555dd1dd4a9691744e30a464f83
 </resources>

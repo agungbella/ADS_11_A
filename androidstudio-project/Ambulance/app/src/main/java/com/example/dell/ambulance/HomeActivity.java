@@ -2,8 +2,21 @@ package com.example.dell.ambulance;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+||||||| merged common ancestors
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.view.View;
+=======
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.view.View;
+>>>>>>> 7ea5667a3926b555dd1dd4a9691744e30a464f83
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +27,11 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
+
+import com.example.dell.ambulance.ambulance.AmbulanceFragment;
+import com.example.dell.ambulance.information.InfoFragment;
+import com.example.dell.ambulance.status.StatusFragment;
 
 import com.example.dell.ambulance.account.SignInActivity;
 import com.example.dell.ambulance.ambulance.AmbulanceFragment;
@@ -25,11 +43,18 @@ import com.example.dell.ambulance.status.StatusActivity;
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+<<<<<<< HEAD
     private final String FRAGMENT_MAP = "map",
             FRAGMENT_AMBULANCE = "ambulance", FRAGMENT_INFO = "info";
 
     private BottomNavigationView bottomNav;
 
+||||||| merged common ancestors
+=======
+    FrameLayout flFragmentContainer;
+    BottomNavigationView bottomNavHome;
+
+>>>>>>> 7ea5667a3926b555dd1dd4a9691744e30a464f83
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +70,7 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+<<<<<<< HEAD
 
         bottomNav = (BottomNavigationView) findViewById(R.id.home_bottom_nav);
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -66,6 +92,41 @@ public class HomeActivity extends AppCompatActivity
             }
         });
         bottomNav.setSelectedItemId(R.id.home_bottom_nav_map);
+||||||| merged common ancestors
+=======
+
+        bottomNavHome = (BottomNavigationView) findViewById(R.id.home_bottom_nav);
+        bottomNavHome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home_nav_info:
+                        loadFragmentByTag("info");
+                        return true;
+                    case R.id.home_nav_status:
+                        loadFragmentByTag("status");
+                        return true;
+                    case R.id.home_nav_ambulance:
+                        loadFragmentByTag("ambu");
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
+    }
+
+    private void loadFragmentByTag(String tag) {
+        Fragment curr = getSupportFragmentManager().findFragmentByTag(tag);
+        if (curr == null) {
+            if (tag.equals("info")) curr = new InfoFragment();
+            else if (tag.equals("ambu")) curr = new AmbulanceFragment();
+            else if (tag.equals("status")) curr = new StatusFragment();
+            else return;
+        }
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.home_fragment_container, curr, tag).commit();
+>>>>>>> 7ea5667a3926b555dd1dd4a9691744e30a464f83
     }
 
     @Override
