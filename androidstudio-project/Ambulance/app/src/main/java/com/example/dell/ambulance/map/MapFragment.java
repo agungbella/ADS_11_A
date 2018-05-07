@@ -1,5 +1,4 @@
-package com.example.dell.ambulance.status;
-
+package com.example.dell.ambulance.map;
 
 
 import android.os.Bundle;
@@ -13,10 +12,10 @@ import com.example.dell.ambulance.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class StatusFragment extends Fragment {
+public class MapFragment extends Fragment {
 
 
-    public StatusFragment() {
+    public MapFragment() {
         // Required empty public constructor
     }
 
@@ -25,7 +24,7 @@ public class StatusFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_status, container, false);
+        return inflater.inflate(R.layout.fragment_map, container, false);
     }
 
 }

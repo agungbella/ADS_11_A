@@ -1,10 +1,10 @@
 package com.example.dell.ambulance;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,8 +13,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.dell.ambulance.ambulance.AmbulanceFragment;
+import com.example.dell.ambulance.information.InfoFragment;
+import com.example.dell.ambulance.map.MapFragment;
+
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private final String FRAGMENT_MAP = "map",
+            FRAGMENT_AMBULANCE = "ambulance", FRAGMENT_INFO = "info";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +29,6 @@ public class HomeActivity extends AppCompatActivity
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -40,6 +38,27 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.home_bottom_nav);
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home_bottom_nav_map:
+                        changeFragmentTo(FRAGMENT_MAP);
+                        return true;
+                    case R.id.home_bottom_nav_ambulance:
+                        changeFragmentTo(FRAGMENT_AMBULANCE);
+                        return true;
+                    case R.id.home_bottom_nav_info:
+                        changeFragmentTo(FRAGMENT_INFO);
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
+        bottomNav.setSelectedItemId(R.id.home_bottom_nav_map);
     }
 
     @Override
@@ -55,7 +74,7 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+        getMenuInflater().inflate(R.menu.home_op_menu, menu);
         return true;
     }
 
@@ -105,6 +124,29 @@ public class HomeActivity extends AppCompatActivity
         return true;
     }
 
+    private void changeFragmentTo(String fragmentTag) {
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag(fragmentTag);
+        if (fragment == null) {
+            switch (fragmentTag) {
+                case FRAGMENT_MAP:
+                    fragment = new MapFragment();
+                    break;
+                case FRAGMENT_AMBULANCE:
+                    fragment = new AmbulanceFragment();
+                    break;
+                case FRAGMENT_INFO:
+                    fragment = new InfoFragment();
+                    break;
+                default:
+                    return;
+            }
+        }
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.home_fragment_container, fragment, fragmentTag)
+                .commit();
+    }
+
     private void rateApp() {
 
     }
@@ -112,7 +154,7 @@ public class HomeActivity extends AppCompatActivity
     private void shareApp() {
 
     }
-    
+
     private void doSignOut() {
 
     }
