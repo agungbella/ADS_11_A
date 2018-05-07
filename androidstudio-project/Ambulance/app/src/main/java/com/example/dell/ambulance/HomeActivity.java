@@ -1,5 +1,6 @@
 package com.example.dell.ambulance;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -10,18 +11,24 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.dell.ambulance.account.SignInActivity;
 import com.example.dell.ambulance.ambulance.AmbulanceFragment;
 import com.example.dell.ambulance.information.InfoFragment;
 import com.example.dell.ambulance.map.MapFragment;
+import com.example.dell.ambulance.settings.SettingsActivity;
+import com.example.dell.ambulance.status.StatusActivity;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private final String FRAGMENT_MAP = "map",
             FRAGMENT_AMBULANCE = "ambulance", FRAGMENT_INFO = "info";
+
+    private BottomNavigationView bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +46,7 @@ public class HomeActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.home_bottom_nav);
+        bottomNav = (BottomNavigationView) findViewById(R.id.home_bottom_nav);
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -93,6 +100,7 @@ public class HomeActivity extends AppCompatActivity
             rateApp();
             return true;
         } else if (id == R.id.home_op_settings) {
+            startActivity(new Intent(HomeActivity.this, SettingsActivity.class));
             return true;
         } else if (id == R.id.home_op_signout) {
             doSignOut();
@@ -101,23 +109,37 @@ public class HomeActivity extends AppCompatActivity
             return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.home_nav_status) {
-
-        } else if (id == R.id.home_nav_info) {
-
-        } else if (id == R.id.home_nav_ambulance) {
-
-        } else if (id == R.id.home_nav_share) shareApp();
-        else if (id == R.id.home_nav_rate) rateApp();
-        else if (id == R.id.home_nav_settings) {
-
-        } else if (id == R.id.home_nav_signout) doSignOut();
+        switch (id) {
+            case R.id.home_nav_status:
+                startActivity(new Intent(HomeActivity.this, StatusActivity.class));
+                break;
+            case R.id.home_nav_info:
+                bottomNav.setSelectedItemId(R.id.home_bottom_nav_info);
+                break;
+            case R.id.home_nav_ambulance:
+                bottomNav.setSelectedItemId(R.id.home_bottom_nav_ambulance);
+                break;
+            case R.id.home_nav_share:
+                shareApp();
+                break;
+            case R.id.home_nav_rate:
+                rateApp();
+                break;
+            case R.id.home_nav_settings:
+                startActivity(new Intent(HomeActivity.this, SettingsActivity.class));
+                break;
+            case R.id.home_nav_signout:
+                doSignOut();
+                break;
+            default:
+                Log.d("HomeActivity", "id oNavigationItemSelected : "+id);
+                return false;
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -156,6 +178,7 @@ public class HomeActivity extends AppCompatActivity
     }
 
     private void doSignOut() {
-
+        startActivity(new Intent(HomeActivity.this, SignInActivity.class));
+        finish();
     }
 }
