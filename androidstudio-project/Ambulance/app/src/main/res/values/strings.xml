@@ -5,7 +5,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="title_activity_main2">Main2Activity</string>
     <string name="title_info">Information</string>
     <string name="title_status">Status</string>
     <string name="title_ambulance">Ambulance</string>
@@ -13,5 +12,20 @@
     <string name="title_sign_in">Sign In</string>
     <string name="title_sign_up">Sign Up</string>
     <string name="title_settings">Settings</string>
+    <string name="title_share">Share</string>
+    <string name="title_rate">Rate Us</string>
+    <string name="title_signout">Sign Out</string>
+    <string name="title_others">Others</string>
+
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="text_doesnthaveaccount">Doesn't Have Account?</string>
+    <string name="text_createsome">Create Some</string>
+    <string name="text_fullname">Full Name</string>
+    <string name="text_nik">NIK</string>
+    <string name="text_address">Address</string>
+    <string name="text_alreadyhaveaccount">Already Have Account?</string>
+    <string name="text_signinnow">Sign In Now</string>
+
 
 </resources>

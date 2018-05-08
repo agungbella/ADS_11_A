@@ -7,35 +7,35 @@
         <item
             android:id="@+id/home_nav_status"
             android:icon="@drawable/ic_favorite_black_24dp"
-            android:title="Status" />
+            android:title="@string/title_status" />
         <item
             android:id="@+id/home_nav_info"
             android:icon="@drawable/ic_info_black_24dp"
-            android:title="Information" />
+            android:title="@string/title_info" />
         <item
             android:id="@+id/home_nav_ambulance"
             android:icon="@drawable/ic_airport_shuttle_black_24dp"
-            android:title="Ambulance" />
+            android:title="@string/title_ambulance" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="@string/title_others">
         <menu>
             <item
                 android:id="@+id/home_nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="@string/title_share" />
             <item
                 android:id="@+id/home_nav_rate"
                 android:icon="@drawable/ic_star_border_black_24dp"
-                android:title="Rate Us" />
+                android:title="@string/title_rate" />
             <item
                 android:id="@+id/home_nav_settings"
                 android:icon="@drawable/ic_settings_black_24dp"
-                android:title="Settings" />
+                android:title="@string/title_settings" />
             <item
                 android:id="@+id/home_nav_signout"
                 android:icon="@drawable/ic_exit_to_app_black_24dp"
-                android:title="Sign Out" />
+                android:title="@string/title_signout" />
         </menu>
     </item>
 
