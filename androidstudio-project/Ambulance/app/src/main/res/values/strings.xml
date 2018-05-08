@@ -26,6 +26,7 @@
     <string name="text_address">Address</string>
     <string name="text_alreadyhaveaccount">Already Have Account?</string>
     <string name="text_signinnow">Sign In Now</string>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>
