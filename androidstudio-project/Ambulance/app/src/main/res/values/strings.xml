@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">CallGency</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -16,6 +17,7 @@
     <string name="title_rate">Rate Us</string>
     <string name="title_signout">Sign Out</string>
     <string name="title_others">Others</string>
+    <string name="title_activity_maps">Map</string>
 
     <string name="text_email">Email</string>
     <string name="text_password">Password</string>
@@ -26,7 +28,9 @@
     <string name="text_address">Address</string>
     <string name="text_alreadyhaveaccount">Already Have Account?</string>
     <string name="text_signinnow">Sign In Now</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="text_shareontimeline">Share On Timeline</string>
+    <string name="text_copylink">Copy Link</string>    
+    <string name="text_call">Call</string>
 
 
 </resources>
