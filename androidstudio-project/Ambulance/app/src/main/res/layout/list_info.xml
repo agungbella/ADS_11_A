@@ -7,8 +7,8 @@
     android:padding="16dp">
     <ImageView
         android:id="@+id/ImageKejadian"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginRight="24dp"
         tools:src="@drawable/ic_launcher_background" />
 
@@ -25,7 +25,7 @@
             android:gravity="center_vertical"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/colorPrimary"
-            tools:text="Nama Pemvosting" />
+            tools:text="Nama Memposting" />
 
         <TextView
             android:id="@+id/TextLokasiKejadian"

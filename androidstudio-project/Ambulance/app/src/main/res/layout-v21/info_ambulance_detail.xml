@@ -91,9 +91,9 @@
                     android:layout_marginStart="8dp"
                     android:layout_toEndOf="@id/profil_percetakan_maps_btn"
                     android:marqueeRepeatLimit="marquee_forever"
-                    android:maxLines="1"
+                    android:maxLines="1" 
                     android:singleLine="true"
-                    android:text="Alamat Instansi Ambulance" />
+                    android:text="Alamat Instansi Pemilik" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
         <!--
@@ -180,6 +180,14 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/profil_percetakan_print_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_airport_shuttle_black_24dp" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
@@ -190,16 +198,14 @@
             android:layout_width="48dp"
             android:layout_height="match_parent"
             android:background="?android:selectableItemBackgroundBorderless"
-            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
-            tools:targetApi="lollipop" />
+            android:src="@drawable/ic_arrow_back_black_24dp"/>
         <ImageButton
             android:id="@+id/profil_percetakan_fav_btn"
             android:layout_width="48dp"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:background="?android:selectableItemBackgroundBorderless"
-            app:srcCompat="@drawable/ic_star_border_black_24dp"
-            tools:targetApi="lollipop" />
+            android:src="@drawable/ic_star_border_black_24dp"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
