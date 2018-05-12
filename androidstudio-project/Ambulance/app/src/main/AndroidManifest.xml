@@ -60,7 +60,9 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".information.DetailInfoActivity" />
+        <activity android:name=".ambulance.DetailAmbulanceActivity"></activity>
     </application>
 
 </manifest>

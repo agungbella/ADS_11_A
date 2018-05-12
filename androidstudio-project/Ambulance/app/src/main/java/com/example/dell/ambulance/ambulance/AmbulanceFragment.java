@@ -2,15 +2,18 @@ package com.example.dell.ambulance.ambulance;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.dell.ambulance.R;
+import com.example.dell.ambulance.information.DetailInfoActivity;
 
 import java.util.ArrayList;
 
@@ -30,14 +33,28 @@ public class AmbulanceFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         ArrayList<AmbulanceList> Ambulance = new ArrayList<>();
-        for(int i = 0;i<10 ;i++)
-        {
-            Ambulance.add(new AmbulanceList("Nama Ambulance"+(i+1),"Rp 1000","Alamat"+(i+1),R.drawable.ic_launcher_background));
-        }
+        Ambulance.add(new AmbulanceList("Nama Ambulance 1","Rp 1000","Alamat",R.drawable.nama1));
+        Ambulance.add(new AmbulanceList("Nama Ambulance 2","Rp 2000","Alamat",R.drawable.nama2));
+        Ambulance.add(new AmbulanceList("Nama Ambulance 3","Rp 3000","Alamat",R.drawable.nama3));
+        Ambulance.add(new AmbulanceList("Nama Ambulance 4","Rp 4000","Alamat",R.drawable.nama4));
+        Ambulance.add(new AmbulanceList("Nama Ambulance 5","Rp 5000","Alamat",R.drawable.nama2));
+        Ambulance.add(new AmbulanceList("Nama Ambulance 6","Rp 6000","Alamat",R.drawable.nama6));
+        Ambulance.add(new AmbulanceList("Nama Ambulance 7","Rp 7000","Alamat",R.drawable.nama7));
+        Ambulance.add(new AmbulanceList("Nama Ambulance 8","Rp 8000","Alamat",R.drawable.nama8));
+        Ambulance.add(new AmbulanceList("Nama Ambulance 9","Rp 9000","Alamat",R.drawable.nama2));
+        Ambulance.add(new AmbulanceList("Nama Ambulance 10","Rp 4000","Alamat",R.drawable.nama10));
+
         AmbulanceAdapter ambulanceAdapter = new AmbulanceAdapter(getContext(),Ambulance);
 
         ListView listView =(ListView) view.findViewById(R.id.listAmbulance);
         listView.setAdapter(ambulanceAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(getContext(), DetailAmbulanceActivity.class));
+            }
+        });
+
     }
 
     @Override

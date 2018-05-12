@@ -2,12 +2,14 @@ package com.example.dell.ambulance.information;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.example.dell.ambulance.R;
@@ -39,6 +41,12 @@ public class InfoFragment extends Fragment {
 
         ListView listView =(ListView) view.findViewById(R.id.listInfo);
         listView.setAdapter(infoAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(getContext(), DetailInfoActivity.class));
+            }
+        });
     }
 
     @Override
